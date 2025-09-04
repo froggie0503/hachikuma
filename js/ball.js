@@ -1,36 +1,62 @@
-
-
 // 获取小球元素
 const ball = document.getElementById('ball');
-window.addEventListener('scroll', checkScrollPosition)
-// 首次加载时也检查一次，以防页面一开始就在底部
-window.addEventListener('load', checkScrollPosition);
 
-const minPosition = 2300; // 小球移動的最低點，例如距離視窗頂部 500px
-const maxPosition = 2350; // 小球移動的最高點，例如距離視窗頂部 800px
+// 定义小球的移动范围 (以距离视窗底部的像素为单位)
+// 这些值现在是「距离底部」的距离
+const bottomMinDistance = 30;  // 距离视窗底部最近 50px
+const bottomMaxDistance = 50; // 距离视窗底部最远 100px
 
-
-var position = minPosition;
-var direction = 1; // 1表示向下移动，-1表示向上移动
+// 定义小球的初始位置和速度
+// 初始位置设定在范围内的某个点
+// 这里的 position 是「距离视窗顶部的距离」，需要从底部距离转换
+let position = window.innerHeight - bottomMaxDistance;
+let direction = 1; // 1 表示向下移动，-1 表示向上移动
 const speed = 1; // 每次移动的像素数
 
-var intervalId = null;
+// 声明一个变量来存储定时器 ID，以便后面可以清除它
+let intervalId = null;
 
-function checkScrollPosition(){
-    
-    // 获取页面总高度
+// 小球动画函数
+function animateBall() {
+    // 更新小球的位置
+    position += speed * direction;
+
+    // 获取小球的底部位置，用于碰撞检测
+    // currentBallBottom = currentBallTop + ballHeight
+    const currentBallBottom = position + ball.clientHeight;
+
+    // 获取视窗的底部位置
+    const viewportBottom = window.innerHeight;
+
+    // 检查是否碰到范围的边界
+    // 这里的碰撞检测现在是基于「距离底部」来计算的
+
+    // 如果小球底部距离视窗底部小于 bottomMinDistance
+    if (viewportBottom - currentBallBottom <= bottomMinDistance) {
+        // 反转方向，开始向上移动
+        direction = -1;
+    }
+    // 或者如果小球底部距离视窗底部大于 bottomMaxDistance
+    else if (viewportBottom - currentBallBottom >= bottomMaxDistance) {
+        // 反转方向，开始向下移动
+        direction = 1;
+    }
+
+    // 应用新的位置
+    ball.style.top = position + 'px';
+}
+
+// 检查是否滚动到页面底部的函数
+function checkScrollPosition() {
     const documentHeight = document.documentElement.scrollHeight;
-    // 获取视窗高度
     const viewportHeight = window.innerHeight;
-    // 获取当前滚动条的位置
     const scrollTop = window.scrollY;
+
     if (scrollTop + viewportHeight >= documentHeight - 100) {
-        // 如果动画还没有启动，就启动它
         if (intervalId === null) {
-            intervalId = setInterval(animateBall, 50);
+            intervalId = setInterval(animateBall, 25);
         }
     } else {
-        // 如果离开了底部，就停止动画
         if (intervalId !== null) {
             clearInterval(intervalId);
             intervalId = null;
@@ -38,24 +64,6 @@ function checkScrollPosition(){
     }
 }
 
-
-// 定义小球的初始位置和速度
-function animateBall(){
-    // 更新小球的位置
-    position += speed * direction;
-    if (position >= maxPosition) {
-        // 反轉方向，開始向上移動
-        direction = -1;
-    }
-    // 或者如果小球的位置低於了最低點
-    else if (position <= minPosition) {
-        // 反轉方向，開始向下移動
-        direction = 1;
-    }
-    ball.style.top = position + 'px';
-}
-
-
-    
-
-   
+// 监听滚动事件和加载事件
+window.addEventListener('scroll', checkScrollPosition);
+window.addEventListener('load', checkScrollPosition);

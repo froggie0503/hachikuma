@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hachikuma</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/wavestyle.css">
+    <style>
+        .navbar {
+            background-color: var(--hk-secondbg);
+        }
+
+        .body {
+            background-color: var(--hk-lightbg);
+        }
+
+        .btn_dark {
+            background-color: var(--hk-text);
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+
+        }
+
+        #logo {
+            width: 60px;
+        }
+
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            /* 垂直置中 */
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            /* 直向排列 */
+            line-height: 1.2;
+        }
+
+        .title-en {
+            font-size: 1.5rem;
+            /* 英文字大一點 */
+            font-weight: bold;
+            color: var(--hk-lighttext);
+            /* 主文字顏色 */
+            letter-spacing: 2px;
+            /* 增加字距，看起來更有設計感 */
+        }
+
+        .title-jp {
+            font-size: 1.1rem;
+            /* 日文字小一點 */
+            color: var(--hk-text);
+            font-weight: bolder;
+            /* 用次要顏色，跟英文區分 */
+        }
+
+        .nav-item {
+            /* color: var(--hk-lighttext); */
+            color: white;
+            font-weight: bolder;
+        }
+
+        .option>.nav-link:hover {
+            color: var(--hk-lighttext);
+            background-color: var(--hk-text);
+        }
+
+
+        h1.text-center {
+            font-size: 4rem;
+            font-weight: bolder;
+            color: transparent;
+            /* 文字中間透明 */
+            -webkit-text-stroke: 1px var(--hk-text);
+            /* 描邊顏色 */
+            text-align: center;
+            display: block;
+
+        }
+
+        h1.caketitle {
+            font-size: 4rem;
+            font-weight: bolder;
+            color: transparent;
+            /* 文字中間透明 */
+            -webkit-text-stroke: 1px var(--hk-text);
+            /* 描邊顏色 */
+            text-align: center;
+            display: block;
+            position: sticky;
+            top: 0
+        }
+
+        .bacc {
+            background-color: var(--hk-secondbg);
+            border-radius: 1.2em;
+            padding: 1em;
+
+        }
+
+        .cakesmtitle {
+            font-size: 2rem;
+            font-weight: bolder;
+            color: var(--hk-text);
+            /* 文字中間透明 */
+            /* background-color: var(--hk-lighttext); */
+            border-bottom: 4mm ridge var(--hk-text);
+        }
+
+        .cakeintroEN,
+        .cakeintroCH {
+            color: var(--hk-text);
+            font-weight: bold;
+            font-size: large;
+        }
+
+        .cakeintroEN {
+            color: var(--hk-text);
+            font-size: smaller;
+            font-weight: 200;
+        }
+
+        .cakeimg {
+            width: 100%;
+            /* 寬度撐滿父容器 */
+            height: 300px;
+            /* 設定你想要的高度 */
+            object-fit: cover;
+            /* 圖片會填滿整個容器並保持比例，超出部分會被裁切 */
+            border-radius: 0.5em;
+        }
+
+        .cakeintro {
+            background-color: var(--hk-lightbg);
+            border-radius: 0.5em;
+            margin-right: 0.7em;
+
+        }
+    </style>
+</head>
+
+
+<body class="body">
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark ">
+            <div class="container-fluid d-flex">
+
+
+                <a class="navbar-brand" href="#">
+                    <img src="../img/logo.png" id="logo" class="me-2">
+                    <span class="brand-text">
+                        <span class="title-en">HACHI KUMA</span>
+                        <span class="title-jp">はちくま</span>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-3 ">
+                        <button class="btn  me-2 btn_dark" type="button">立即訂購</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="option">
+            <br>
+            <h1 class="text-center">MENU</h1>
+            <ul class="nav nav-pills flex-column justify-content-center flex-md-row text-center mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="#cakemenu" data-bs-toggle="pill">精緻蛋糕</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#twitter" data-bs-toggle="pill">輕食小點</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#examples" data-bs-toggle="pill">小農合作</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about" data-bs-toggle="pill">更多產品</a>
+                </li>
+            </ul>
+            <br><br><br>
+            <div class="tab-content">
+                <div class="tab-pane show active" id="cakemenu">
+                    <h1 class="caketitle">精緻蛋糕 Exquisite cake</h1>
+                    <br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="cake col-12 col-lg-6">
+                                <div class="bacc">
+                                    <h3 class="text-center fw-bold cakesmtitle">蜂蜜提拉米蘇 Honey Tiramisu
+                                    </h3>
+                                    <div class="row row-col-2">
+                                        <div class="col">
+                                            <img src="../img/Tiramisu_2.jpg" class="cakeimg w-100">
+                                        </div>
+                                        <div
+                                            class="col cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                            <p class="cakeintroCH">
+                                                經典提拉米蘇注入蜂蜜的香氣，取代部分糖分，讓甜味更柔和。層層堆疊如人生的甜與苦，小熊以蜂蜜的純粹，帶來一抹溫柔的幸福。
+                                            </p>
+                                            <!-- <p class="cakeintroEN fs-6">
+                                                The Italian classic infused with honey’s golden touch. Subtle layers of
+                                                sweetness and bitterness create harmony — Pure Honey, Pure Delight.
+                                            </p> -->
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="twitter">
+                    <h1>Twitter</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
+                        assumenda
+                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
+                        consequatur nostrum nisi nesciunt.</p>
+
+                </div>
+                <div class="tab-pane" id="examples">
+                    <h1>Examples</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
+                        assumenda
+                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
+                        consequatur nostrum nisi nesciunt.</p>
+
+                </div>
+                <div class="tab-pane" id="about">
+                    <h1>About</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
+                        assumenda
+                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
+                        consequatur nostrum nisi nesciunt.</p>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="animate">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+    </div>
+
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/ball.js"></script>
+    <!-- <script src="../js/wave.js"></script> -->
+</body>
+
+</html>
