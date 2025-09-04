@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 
 <head>
+    <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hachikuma</title>
@@ -131,17 +132,58 @@
             top: 15px;
         }
 
-        #ball,.balllogo{
+        #ball {
+           
+            left: 50%;
+             transform: translateX(-50%);
+
             width: 400px;
             height: 400px;
             background-color: var(--hk-lighttext);
             border-radius: 50%;
             position: fixed;
-   
+
+            opacity: 0;
+            visibility: hidden;
+            /* 加入過渡效果，讓顯示和隱藏更平滑 */
+            transition: opacity 0.5s ease-in-out;
 
         }
-     
-        
+
+        .balllogo {
+            width: 400px;
+            height: 400px;
+            background-color: var(--hk-lighttext);
+            border-radius: 50%;
+            position: fixed;
+
+        }
+
+        .logotext {
+            background-color: aqua;
+        }
+
+        .titleT {
+            font-size: 3rem;
+            font-weight: bolder;
+            color: var(--hk-lightbg);
+            /* 文字中間透明 */
+            -webkit-text-stroke: 1px var(--hk-text);
+            /* 描邊顏色 */
+            /* background-color: var(--hk-lightbg); */
+            text-align: center;
+            display: block;
+
+        }
+        .brandinfo{
+            background-color: var( --hk-maincolor);
+            border-radius: 15px;
+            margin-left: 2em;
+            margin-right: 2em;
+            padding: 20px;
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+        }
     </style>
 </head>
 
@@ -152,7 +194,7 @@
             <div class="container-fluid d-flex">
 
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="./index.html">
                     <img src="../img/logo.png" id="logo" class="me-2">
                     <span class="brand-text">
                         <span class="title-en">HACHI KUMA</span>
@@ -172,13 +214,13 @@
                             <a class="nav-link active" aria-current="page" href="#"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="./Menu.html">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
                     <form class="d-flex ms-3 ">
@@ -220,9 +262,10 @@
         </div>
         <h1 class="buttontext text-end">純粹蜂蜜，純粹美好</h1>
 
-        <br><br>
+        <br><br> <br><br>
+        <hr>
 
-        <h1 class="text-center">本月精選</h1>
+        <h1 class="text-center titleT">本月精選</h1>
         <div class="container">
             <div class="month row ">
                 <div class="card-group">
@@ -232,9 +275,9 @@
                         <div class="card">
                             <img src="../img/Cheesecake_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">濃郁乳酪融合蜂蜜，焦香與甜美並存。</p>
-                                <p class="card-text">Rich cheesecake with honey’s golden sweetness and caramelized
-                                    notes.</p>
+                                <p class="card-text text-center">濃郁乳酪融合蜂蜜，焦香與甜美並存。</p>
+                                <!-- <p class="card-text">Rich cheesecake with honey’s golden sweetness and caramelized -->
+                                <!-- notes.</p> -->
                             </div>
                         </div>
                     </div>
@@ -244,9 +287,9 @@
                         <div class="card">
                             <img src="../img/Canelé_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">外脆內嫩，蜂蜜芬芳悠長。</p>
+                                <p class="card-text text-center">外脆內嫩，蜂蜜芬芳悠長。</p>
                                 <br>
-                                <p class="card-text">Caramelized crust with a tender center, enriched by honey aroma.
+                                <!-- <p class="card-text">Caramelized crust with a tender center, enriched by honey aroma. -->
                                 </p>
                             </div>
                         </div>
@@ -257,8 +300,8 @@
                         <div class="card">
                             <img src="../img/Tiramisu_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">經典義式甜點，融入蜂蜜的新風味。</p>
-                                <p class="card-text">An Italian classic reimagined with honey’s golden sweetness.</p>
+                                <p class="card-text text-center">經典義式甜點，融入蜂蜜的新風味。</p>
+                                <!-- <p class="card-text">An Italian classic reimagined with honey’s golden sweetness.</p> -->
                             </div>
                         </div>
                     </div>
@@ -268,8 +311,8 @@
                         <div class="card">
                             <img src="../img/Madeleines_1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text">蜂蜜點綴的貝殼小蛋糕，清香迷人。</p>
-                                <p class="card-text">Delicate shell-shaped cakes with a touch of honey aroma.</p>
+                                <p class="card-text text-center">蜂蜜點綴的貝殼小蛋糕，清香迷人。</p>
+                                <!-- <p class="card-text">Delicate shell-shaped cakes with a touch of honey aroma.</p> -->
                             </div>
                         </div>
                     </div>
@@ -280,13 +323,20 @@
             <div id="ball">
                 <img src="../img/logo.png" class="balllogo">
             </div>
+            <div class="titleT">
+                關於 HACHI KUMA
+            </div>
+            <div class="brandinfo">
+                我們相信甜點不只是味覺的享受，更是日常裡的溫柔陪伴。HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，以職人的細心手藝，帶來單純而真摯的甜美時光。
+            </div>
 
 
 
     </main>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 
 
     <div class="animate">

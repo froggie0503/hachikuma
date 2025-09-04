@@ -2,6 +2,7 @@
 <html lang="zh-TW">
 
 <head>
+    <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hachikuma</title>
@@ -84,17 +85,20 @@
         }
 
         h1.caketitle {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: bolder;
-            color: transparent;
+            color: var(--hk-lightbg);
             /* 文字中間透明 */
             -webkit-text-stroke: 1px var(--hk-text);
             /* 描邊顏色 */
+            /* background-color: var(--hk-lightbg); */
             text-align: center;
             display: block;
             position: sticky;
             top: 0
         }
+
+
 
         .bacc {
             background-color: var(--hk-secondbg);
@@ -107,23 +111,19 @@
             font-size: 2rem;
             font-weight: bolder;
             color: var(--hk-text);
-            /* 文字中間透明 */
+            margin-bottom: 30px;
             /* background-color: var(--hk-lighttext); */
             border-bottom: 4mm ridge var(--hk-text);
         }
 
-        .cakeintroEN,
+
         .cakeintroCH {
             color: var(--hk-text);
             font-weight: bold;
             font-size: large;
+            padding: 15px;
         }
 
-        .cakeintroEN {
-            color: var(--hk-text);
-            font-size: smaller;
-            font-weight: 200;
-        }
 
         .cakeimg {
             width: 100%;
@@ -138,8 +138,6 @@
         .cakeintro {
             background-color: var(--hk-lightbg);
             border-radius: 0.5em;
-            margin-right: 0.7em;
-
         }
     </style>
 </head>
@@ -151,7 +149,7 @@
             <div class="container-fluid d-flex">
 
 
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="../img/logo.png" id="logo" class="me-2">
                     <span class="brand-text">
                         <span class="title-en">HACHI KUMA</span>
@@ -171,13 +169,13 @@
                             <a class="nav-link active" aria-current="page" href="#"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="./Menu.html">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
                     <form class="d-flex ms-3 ">
@@ -196,42 +194,80 @@
                     <a class="nav-link active " aria-current="page" href="#cakemenu" data-bs-toggle="pill">精緻蛋糕</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#twitter" data-bs-toggle="pill">輕食小點</a>
+                    <a class="nav-link" href="#snacks" data-bs-toggle="pill">輕食小點</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#examples" data-bs-toggle="pill">小農合作</a>
+                    <a class="nav-link" href="#farm" data-bs-toggle="pill">小農產品</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" data-bs-toggle="pill">更多產品</a>
-                </li>
+
             </ul>
             <br><br><br>
             <div class="tab-content">
                 <div class="tab-pane show active" id="cakemenu">
                     <h1 class="caketitle">精緻蛋糕 Exquisite cake</h1>
+
+
                     <br><br>
                     <div class="container">
-                        <div class="row">
-                            <div class="cake col-12 col-lg-6">
-                                <div class="bacc">
-                                    <h3 class="text-center fw-bold cakesmtitle">蜂蜜提拉米蘇 Honey Tiramisu
-                                    </h3>
-                                    <div class="row row-col-2">
-                                        <div class="col">
-                                            <img src="../img/Tiramisu_2.jpg" class="cakeimg w-100">
-                                        </div>
-                                        <div
-                                            class="col cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
-                                            <p class="cakeintroCH">
-                                                經典提拉米蘇注入蜂蜜的香氣，取代部分糖分，讓甜味更柔和。層層堆疊如人生的甜與苦，小熊以蜂蜜的純粹，帶來一抹溫柔的幸福。
-                                            </p>
-                                            <!-- <p class="cakeintroEN fs-6">
-                                                The Italian classic infused with honey’s golden touch. Subtle layers of
-                                                sweetness and bitterness create harmony — Pure Honey, Pure Delight.
-                                            </p> -->
-                                        </div>
-                                    </div>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜提拉米蘇 Honey Tiramisu
+                            </h3>
+                            <div class="bacc col-md-8 ">
 
+
+                                <img src="../img/Tiramisu_2.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        經典提拉米蘇注入蜂蜜的香氣，取代部分糖分，讓甜味更柔和。層層堆疊如人生的甜與苦，小熊以蜂蜜的純粹，帶來一抹溫柔的幸福。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜巴斯克乳酪蛋糕 Honey Basque Cheesecake
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/Cheesecake_3.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        巴斯克乳酪蛋糕以蜂蜜取代部分糖分，增添天然的清甜。濃郁奶香與焦香外皮相互交融，每一口都是真實純粹的美味。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜蛋糕 Honey cake
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/honey_cake.png" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        採用純粹天然蜂蜜取代人工糖分，讓蛋糕入口即化，甜而不膩。每一口都像被大自然溫柔擁抱，傳遞「純粹蜂蜜，純粹美好」的真實味道。
+                                    </p>
 
                                 </div>
                             </div>
@@ -240,37 +276,216 @@
                     </div>
 
                 </div>
-                <div class="tab-pane" id="twitter">
-                    <h1>Twitter</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
-                        assumenda
-                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
-                        consequatur nostrum nisi nesciunt.</p>
+                <div class="tab-pane" id="snacks">
+                    <h1 class="caketitle">輕食小點 snacks</h1>
+
+
+                    <br><br>
+                    <div class="container">
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜瑪德蓮 Honey Madeleines
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/Madeleines_3.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        將蜂蜜融入法式經典瑪德蓮，散發柔和花香與甜味。外層微酥、內裡鬆軟，每一顆都承載小熊般的溫暖心意，讓甜蜜時光更純粹。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜布丁 Honey Pudding
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/pudding.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        選用天然蜂蜜製作的布丁，口感細膩柔滑。淡雅甜香隨著每一口散開，如同小熊悄悄遞上的甜蜜心意，傳遞自然的美好。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜冰淇淋 Honey Ice Cream
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/iceCream_1.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        將純淨蜂蜜融入細緻冰淇淋，帶來沁涼與濃郁的雙重享受。每一口都喚醒夏日的愉悅心情，純粹自然的甜味令人難忘。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜可麗露 Honey Canelé
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/Canelé_2.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <p class="cakeintroCH">
+                                        法式可麗露在蜂蜜的加持下，外層焦脆、內裡柔嫩，散發優雅的香氣。就像小熊溫暖的陪伴，讓甜點時光多了一份純粹的幸福。
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="farm">
+                    <h1 class="caketitle">小農產品 local farm products</h1>
+
+
+                    <br><br>
+                    <div class="container">
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">百花蜜
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/honey_1.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <div class="cakeintroCH text-start">
+                                        <p>農場：夏湖農場</p>
+                                        <p>特色：多花混合，依季節風味不同</p>
+                                        <p>香味：清雅多變，層次豐富</p>
+                                        <i class="bi bi-map-fill"></i>
+                                    </div>
+                                    <a class="btn btn_dark text-end" href="https://sha-lake.com/" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
+                                        </svg>
+                                        查看農場資訊
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">龍眼蜜
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/honey_2.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <div class="cakeintroCH text-start">
+                                        <p>農場：宏基蜂蜜生態農場</p>
+                                        <p>特色：台灣代表性蜂蜜，產季 4–5 月</p>
+                                        <p>香味：香氣濃厚、甜味圓潤</p>
+                                        <i class="bi bi-map-fill"></i>
+                                    </div>
+                                    <a class="btn btn_dark text-end" href="https://www.hgbees.com.tw" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
+                                        </svg>
+                                        查看農場資訊
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="cake row">
+                            <h3 class="text-center fw-bold cakesmtitle">荔枝蜜
+                            </h3>
+                            <div class="bacc col-md-8 ">
+
+
+                                <img src="../img/honey_2.jpg" class="cakeimg w-100">
+
+                            </div>
+                            <div
+                                class="col-md-4 cakeintro text-center d-flex flex-column justify-content-center align-items-center text-center p-2">
+                                <div>
+                                    <div class="cakeintroCH text-start">
+                                        <p>農場：雅歌園有機教育農場</p>
+                                        <p>特色：採收期 3–4 月，甜度高</p>
+                                        <p>香味：荔枝花香甜、果香明顯</p>
+                                        <i class="bi bi-map-fill"></i>
+                                    </div>
+                                    <a class="btn btn_dark text-end" href="https://ecofarm.myorganic.org.tw/%E8%9C%82%E8%9C%9C?utm_source=chatgpt.com" target="_blank">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
+                                        </svg>
+                                        查看農場資訊
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
 
                 </div>
-                <div class="tab-pane" id="examples">
-                    <h1>Examples</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
-                        assumenda
-                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
-                        consequatur nostrum nisi nesciunt.</p>
 
-                </div>
-                <div class="tab-pane" id="about">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore ipsum voluptates labore
-                        assumenda
-                        optio placeat quia? Magnam maiores possimus reiciendis, voluptas eos architecto error voluptates
-                        consequatur nostrum nisi nesciunt.</p>
-
-                </div>
             </div>
-
-        </div>
     </main>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 
 
     <div class="animate">

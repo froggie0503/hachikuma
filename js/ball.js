@@ -4,7 +4,7 @@ const ball = document.getElementById('ball');
 // 定义小球的移动范围 (以距离视窗底部的像素为单位)
 // 这些值现在是「距离底部」的距离
 const bottomMinDistance = 30;  // 距离视窗底部最近 50px
-const bottomMaxDistance = 50; // 距离视窗底部最远 100px
+const bottomMaxDistance = 55; // 距离视窗底部最远 100px
 
 // 定义小球的初始位置和速度
 // 初始位置设定在范围内的某个点
@@ -51,17 +51,73 @@ function checkScrollPosition() {
     const documentHeight = document.documentElement.scrollHeight;
     const viewportHeight = window.innerHeight;
     const scrollTop = window.scrollY;
+    //觸發動畫的數值 (距離底部100px)
+    const triggerThreshold = documentHeight - viewportHeight - 100;
 
-    if (scrollTop + viewportHeight >= documentHeight - 100) {
+    if (scrollTop >= triggerThreshold) {
+
+        // 到达底部时，显示小球
+        ball.style.opacity = '1';
+        ball.style.visibility = 'visible';
+
+        // 只有在动画没有运行时才启动它
         if (intervalId === null) {
-            intervalId = setInterval(animateBall, 25);
+            // 在启动动画前，确保小球位置正确
+            position = window.innerHeight - bottomMaxDistance - 400;
+            ball.style.top = position + 'px';
+
+            intervalId = setInterval(animateBall, 50);
         }
+
+
+
+
     } else {
+
+        // 离开底部时，隐藏小球
+        ball.style.opacity = '0';
+        // 使用 setTimeout 确保在淡出动画完成后才彻底隐藏
+        ball.style.visibility = 'hidden';
+        // 这个时间应该与你 CSS 中的 transition-duration 保持一致
+
+        // 停止动画
         if (intervalId !== null) {
             clearInterval(intervalId);
             intervalId = null;
         }
+
+
+
+
+
+
+
     }
+
+
+
+
+
+
+
+    // if (scrollTop + viewportHeight >= documentHeight - 100) {
+    //     if (intervalId === null) {
+    //         position = window.innerHeight - bottomMaxDistance-400;
+    //         ball.style.top = position + 'px';
+    //         intervalId = setInterval(animateBall, 70);
+    //     }
+    // } else {
+    //     if (intervalId !== null) {
+    //         clearInterval(intervalId);
+    //         intervalId = null;
+    //     }
+    // } 
+
+
+
+
+
+
 }
 
 // 监听滚动事件和加载事件

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <link rel="shortcut icon" href="../img/icon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hachikuma</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/wavestyle.css">
+    <style>
+        .navbar {
+            background-color: var(--hk-secondbg);
+        }
+
+        .body {
+            background-color: var(--hk-lightbg);
+        }
+
+        .btn_dark {
+            background-color: var(--hk-text);
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+
+        }
+
+        #logo {
+            width: 60px;
+        }
+
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            /* 垂直置中 */
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            /* 直向排列 */
+            line-height: 1.2;
+        }
+
+        .title-en {
+            font-size: 1.5rem;
+            /* 英文字大一點 */
+            font-weight: bold;
+            color: var(--hk-lighttext);
+            /* 主文字顏色 */
+            letter-spacing: 2px;
+            /* 增加字距，看起來更有設計感 */
+        }
+
+        .title-jp {
+            font-size: 1.1rem;
+            /* 日文字小一點 */
+            color: var(--hk-text);
+            font-weight: bolder;
+            /* 用次要顏色，跟英文區分 */
+        }
+
+        .nav-item {
+            /* color: var(--hk-lighttext); */
+            color: white;
+            font-weight: bolder;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        h1.toptext {
+
+            font-weight: bold;
+            color: var(--hk-maincolor);
+            margin: 0px 0px -6px 0px;
+        }
+
+        .buttontext {
+            font-size: 3rem;
+            font-weight: bolder;
+            color: transparent;
+            /* 文字中間透明 */
+            -webkit-text-stroke: 1px var(--hk-text);
+            /* 描邊顏色 */
+            text-align: center;
+            display: block;
+            margin: -8px 0px 0px 0px;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+            position: relative;
+
+        }
+
+        .month {
+            background-color: var(--hk-secondbg);
+            padding: 50px;
+            border-radius: 30px;
+        }
+
+        .card-text {
+            font-weight: bolder;
+            color: var(--hk-text);
+            /* background-color:var(--hk-lightbg); */
+        }
+
+        .card-img-top {
+            width: 100%;
+            /* 寬度撐滿父容器 */
+            height: 300px;
+            /* 設定你想要的高度 */
+            object-fit: cover;
+            /* 圖片會填滿整個容器並保持比例，超出部分會被裁切 */
+        }
+
+        .card-body {
+            height: 175px;
+        }
+
+        .whole_card {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1.title {
+            top: 15px;
+        }
+
+        #ball,.balllogo{
+            width: 400px;
+            height: 400px;
+            background-color: var(--hk-lighttext);
+            border-radius: 50%;
+            position: fixed;
+   
+
+        }
+     
+        
+    </style>
+</head>
+
+
+<body class="body">
+    <header>
+        <nav class="navbar navbar-expand-lg  navbar-dark ">
+            <div class="container-fluid d-flex">
+
+
+                <a class="navbar-brand" href="./index.html">
+                    <img src="../img/logo.png" id="logo" class="me-2">
+                    <span class="brand-text">
+                        <span class="title-en">HACHI KUMA</span>
+                        <span class="title-jp">はちくま</span>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ms-3 ">
+                        <button class="btn  me-2 btn_dark" type="button">立即訂購</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        
+    </main>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="animate">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+    </div>
+
+
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/ball.js"></script>
+    <!-- <script src="../js/wave.js"></script> -->
+</body>
+
+</html>
