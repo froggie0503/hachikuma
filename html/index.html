@@ -133,9 +133,9 @@
         }
 
         #ball {
-           
+
             left: 50%;
-             transform: translateX(-50%);
+            transform: translateX(-50%);
 
             width: 400px;
             height: 400px;
@@ -179,14 +179,49 @@
             display: block;
 
         }
-        .brandinfo{
-            background-color: var( --hk-maincolor);
+
+        .brandinfo {
+            background-color: var(--hk-maincolor);
             border-radius: 15px;
             margin-left: 2em;
             margin-right: 2em;
             padding: 20px;
             color: var(--hk-lighttext);
             font-weight: bolder;
+        }
+
+        div.bearfloat {
+            /* left: 50%; */
+            transform: translateX(-50%);
+            position: absolute;
+            /* margin-left: auto; */
+            z-index: 9999;
+
+        }
+
+        img.bearfloat {
+            width: auto;
+            height: 100px;
+            right: 0;
+            bottom: 50px;
+            position: fixed;
+            z-index: 9999;
+            cursor: pointer;
+
+        }
+
+
+        .toast-container {
+            position: fixed;
+            bottom: 125px;
+            /* 距離底部 30 像素 */
+            right: 10px;
+            /* 距離右側 30 像素 */
+
+        }
+
+        .toast {
+            max-width: 200px;
         }
     </style>
 </head>
@@ -337,6 +372,21 @@
 
 
     </main>
+    <div class="toast-container position-fixed  p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Hachi Kuma</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                歡迎光臨HACHIKUMA!
+            </div>
+        </div>
+    </div>
+    <div id="bearfloat">
+        <img src="../img/bear_float.png" class="bearfloat" id="bearfloat-img">
+    </div>
 
 
     <br><br><br><br><br><br><br><br>
@@ -353,8 +403,12 @@
     </div>
 
 
+
+<!-- <script src="../js/test.js"></script> -->
+<script src="../js/ball.js"></script>
+    <script src="../js/bearfloat.js"></script>
+    <script src="../js/toasts.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/ball.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 

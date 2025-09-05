@@ -139,6 +139,40 @@
             background-color: var(--hk-lightbg);
             border-radius: 0.5em;
         }
+
+        div.bearfloat {
+            /* left: 50%; */
+            transform: translateX(-50%);
+            position: absolute;
+            /* margin-left: auto; */
+            z-index: 9999;
+
+        }
+
+        img.bearfloat {
+            width: auto;
+            height: 100px;
+            right: 0;
+            bottom: 50px;
+            position: fixed;
+            z-index: 9999;
+            cursor: pointer;
+
+        }
+
+
+        .toast-container {
+            position: fixed;
+            bottom: 125px;
+            /* 距離底部 30 像素 */
+            right: 10px;
+            /* 距離右側 30 像素 */
+
+        }
+
+        .toast {
+            max-width: 200px;
+        }
     </style>
 </head>
 
@@ -463,7 +497,9 @@
                                         <p>香味：荔枝花香甜、果香明顯</p>
                                         <i class="bi bi-map-fill"></i>
                                     </div>
-                                    <a class="btn btn_dark text-end" href="https://ecofarm.myorganic.org.tw/%E8%9C%82%E8%9C%9C?utm_source=chatgpt.com" target="_blank">
+                                    <a class="btn btn_dark text-end"
+                                        href="https://ecofarm.myorganic.org.tw/%E8%9C%82%E8%9C%9C?utm_source=chatgpt.com"
+                                        target="_blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                             fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
                                             <path fill-rule="evenodd"
@@ -486,6 +522,21 @@
 
 
     <br><br><br><br><br><br>
+    <div class="toast-container position-fixed  p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Hachi Kuma</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                歡迎光臨HACHIKUMA!
+            </div>
+        </div>
+    </div>
+    <div id="bearfloat">
+        <img src="../img/bear_float.png" class="bearfloat" id="bearfloat-img">
+    </div>
 
 
     <div class="animate">
@@ -499,7 +550,8 @@
 
 
     <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/ball.js"></script>
+    <script src="../js/bearfloat.js"></script>
+    <script src="../js/toasts.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 

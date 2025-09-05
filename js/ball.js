@@ -70,8 +70,6 @@ function checkScrollPosition() {
         }
 
 
-
-
     } else {
 
         // 离开底部时，隐藏小球
@@ -85,12 +83,6 @@ function checkScrollPosition() {
             clearInterval(intervalId);
             intervalId = null;
         }
-
-
-
-
-
-
 
     }
 

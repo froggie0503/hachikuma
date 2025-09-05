@@ -179,6 +179,109 @@
             border-radius: 10px;
             color: var(--hk-lighttext);
         }
+
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            display: flex;
+            background-color: var(--hk-maincolor);
+        }
+
+        .scroll-left {
+
+            animation: scroll-left 40s linear infinite;
+        }
+
+        .scroll-right {
+
+            animation: scroll-right 30s linear infinite;
+        }
+
+        .slider-track {
+            display: inline-block;
+            /* 讓內部變成一整塊水平元素 */
+            white-space: nowrap;
+            /* 禁止自動換行 */
+        }
+
+
+        .slider img {
+            height: 200px;
+            width: 200px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes scroll-right {
+            from {
+                transform: translateX(-50%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .ingredientsimg {
+
+
+            width: 300px;
+            height: 200px;
+        }
+
+        .ingredientsimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px
+        }
+
+        div.bearfloat {
+            /* left: 50%; */
+            transform: translateX(-50%);
+            position: absolute;
+            /* margin-left: auto; */
+            z-index: 9999;
+
+        }
+
+        img.bearfloat {
+            width: auto;
+            height: 100px;
+            right: 0;
+            bottom: 50px;
+            position: fixed;
+            z-index: 9999;
+            cursor: pointer;
+
+        }
+
+
+        .toast-container {
+            position: fixed;
+            bottom: 125px;
+            /* 距離底部 30 像素 */
+            right: 10px;
+            /* 距離右側 30 像素 */
+
+        }
+
+        .toast {
+            max-width: 200px;
+        }
     </style>
 </head>
 
@@ -247,7 +350,7 @@
                         <img src="../img/logo.png" class="w-100 h-100">
                     </div>
 
-                    <div class="col-lg-6 d-flex align-self-center col-12">
+                    <div class="col-lg-6 align-self-center col-12">
                         <div>
                             <div class=" info p-5">我們相信甜點不只是味覺的享受，更是日常裡的溫柔陪伴。
                                 HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，以職人的細心手藝，帶來單純而真摯的甜美時光。
@@ -259,15 +362,17 @@
                     </div>
 
                 </div>
-
+                <br><br><br>
             </div>
         </div>
 
-        <br><br><br><br><br><br><br>
 
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br>
-        <h1 class="brand">Brand concept</h1>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+        <br><br><br><br><br><br>
+
+
+        <h1 class="brand">Concept</h1>
         <br><br><br>
         <h1 class="brand brandjp">品牌理念</h1>
 
@@ -276,7 +381,7 @@
             <div class="container ">
                 <div class="d row justify-content-center">
                     <div class="brand col-lg-6 col-12">
-                        <img src="../img/logo.png" class="w-100 h-100">
+                        <img src="../img/logo.png" class="w-100 h-100 rounded">
                     </div>
 
                     <div class="col-lg-6  align-self-center col-12">
@@ -294,18 +399,135 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-<br><br><br>
+                <br><br><br>
+            </div>
+        </div>
+        <br><br>
+
+        <br><br>
+        <div class="text-center scroll-left slider-track">
+            <div class="info">
+                甜點不只是味覺的享受，更是日常的溫柔陪伴。 スイーツは味覚だけでなく、日常をやさしく包む存在。Desserts are more than taste—they are gentle companions
+                in daily life.
             </div>
         </div>
 
 
+        <div class="slider">
+            <div class="slider-track scroll-right">
+
+                <img src="../img/honey_1.jpg" alt="餅乾">
+                <img src="../img/Tiramisu_2.jpg" alt="布丁">
+                <img src="../img/Canelé_2.jpg" alt="瑪德蓮">
+                <img src="../img/Madeleines_3.jpg" alt="飲品">
+                <img src="../img/Cheesecake_3.jpg" alt="蛋糕">
+                <img src="../img/Cheesecake_2.jpg" alt="蛋糕">
+                <img src="../img/honey_3.jpg" alt="餅乾">
+                <img src="../img/Madeleines_1.jpg" alt="飲品">
+                <img src="../img/Tiramisu_2.jpg" alt="布丁">
+                <img src="../img/Canelé_1.jpg" alt="瑪德蓮">
+            </div>
+        </div>
+        <div class="text-center scroll-left slider-track">
+            <div class="info">
+                HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，
+                以職人的細心手藝，帶來單純而真摯的甜美時光。HACHI KUMA は、蜂蜜の自然な純粋さと、小熊の愛らしさを重ね合わせ、
+                厳選した天然素材と職人の丁寧な手仕事で、素朴で真心のこもった甘いひとときをお届けします。HACHI KUMA combines the natural purity of honey with the
+                warmth and playfulness of a little bear.
+            </div>
+        </div>
+        <br><br><br>
+        <br><br><br>
+
+        <h1 class="brand">Ingredients</h1>
+        <br><br><br>
+        <h1 class="brand brandjp">食材</h1>
+
+        <div class="brandinfo">
+            <br><br><br><br>
+            <div class="container ">
+                <div class=" row justify-content-center">
+                    <div class="ingredientsimg col-lg-8 col-12 ">
+                        <img src="../img/butter_1.jpg">
+                    </div>
+
+                    <div class="col-lg-4  align-self-center col-12">
+                        <div>
+                            <div class="p-3">
+                                <div class="info text-center align-self-center">
+                                    <div class="p-1 minititle ms-auto">法國依思尼發酵奶油</div>
+                                    <div class="p-1">口感細膩，香氣濃郁，製作蛋糕與餅乾最佳選擇。</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class=" row justify-content-center">
+                    <div class="ingredientsimg col-lg-8 col-12 ">
+                        <img src="../img/honey_4.jpg">
+                    </div>
+
+                    <div class="col-lg-4  align-self-center col-12">
+                        <div>
+                            <div class="p-3">
+                                <div class="info text-center align-self-center">
+                                    <div class="p-1 minititle ms-auto">蜂蜜</div>
+                                    <div class="p-1">台灣龍眼蜜 / 百花蜜：天然甜味，帶花香，讓甜點更溫潤。</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+                <div class=" row justify-content-center">
+                    <div class="ingredientsimg col-lg-8 col-12 ">
+                        <img src="../img/Donuts_1.jpg">
+                    </div>
+
+                    <div class="col-lg-4  align-self-center col-12">
+                        <div>
+                            <div class="p-3">
+                                <div class="info text-center align-self-center">
+                                    <div class="p-1 minititle ms-auto">牛奶</div>
+                                    <div class="p-1">台灣小農鮮乳：鮮香純淨，增添甜點奶香。</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <hr>
+
+                <br><br><br><br><br><br>
+            </div>
+
+        </div>
+
+
+
+
+
+
     </main>
+    <div class="toast-container position-fixed  p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Hachi Kuma</strong>
+
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                歡迎光臨HACHIKUMA!
+            </div>
+        </div>
+    </div>
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
     <div class="animate">
@@ -318,8 +540,17 @@
     </div>
 
 
+
+
+    <div id="bearfloat">
+        <img src="../img/bear_float.png" class="bearfloat" id="bearfloat-img">
+    </div>
+
+
+
     <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/ball.js"></script>
+    <script src="../js/bearfloat.js"></script>
+    <script src="../js/toasts.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 
