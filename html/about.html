@@ -168,11 +168,7 @@
             background-color: var(--hk-lightbg);
         }
 
-        .info {
-            font-weight: bold;
-            font-size: larger;
-            color: var(--hk-text);
-        }
+
 
         .minititle {
             background-color: var(--hk-text);
@@ -233,7 +229,34 @@
             to {
                 transform: translateX(0);
             }
+
+
+
         }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            /* 確保超出螢幕的內容被隱藏 */
+        }
+
+        .scroll-track {
+            display: flex;
+            /* 讓子元素（文字）可以並排 */
+            animation: scroll-left 40s linear infinite;
+            /* 設定動畫 */
+            white-space: nowrap;
+            /* 強制文字不換行 */
+        }
+
+        .info {
+            font-weight: bold;
+            font-size: larger;
+            color: var(--hk-text);
+            padding: 0 20px;
+            /* 增加文字間距，避免內容太擠 */
+        }
+
 
         .ingredientsimg {
 
@@ -281,6 +304,17 @@
 
         .toast {
             max-width: 200px;
+        }
+
+        .toast-header {
+            /* 使用你網站自定義的顏色變數 */
+            background-color: var(--hk-text);
+            color: var(--hk-lighttext);
+        }
+
+        .toast-body {
+            background-color: var(--hk-lightbg);
+            color: var(--hk-text);
         }
     </style>
 </head>
@@ -407,10 +441,16 @@
         <br><br>
 
         <br><br>
-        <div class="text-center scroll-left slider-track">
-            <div class="info">
-                甜點不只是味覺的享受，更是日常的溫柔陪伴。 スイーツは味覚だけでなく、日常をやさしく包む存在。Desserts are more than taste—they are gentle companions
-                in daily life.
+        <div class="text-center slider-container">
+            <div class="scroll-track">
+                <span class="info">
+                    甜點不只是味覺的享受，更是日常的溫柔陪伴。 スイーツは味覚だけでなく、日常をやさしく包む存在。Desserts are more than taste—they are gentle
+                    companions in daily life.
+                </span>
+                <span class="info">
+                    甜點不只是味覺的享受，更是日常的溫柔陪伴。 スイーツは味覚だけでなく、日常をやさしく包む存在。Desserts are more than taste—they are gentle
+                    companions in daily life.
+                </span>
             </div>
         </div>
 
@@ -430,14 +470,23 @@
                 <img src="../img/Canelé_1.jpg" alt="瑪德蓮">
             </div>
         </div>
-        <div class="text-center scroll-left slider-track">
-            <div class="info">
-                HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，
-                以職人的細心手藝，帶來單純而真摯的甜美時光。HACHI KUMA は、蜂蜜の自然な純粋さと、小熊の愛らしさを重ね合わせ、
-                厳選した天然素材と職人の丁寧な手仕事で、素朴で真心のこもった甘いひとときをお届けします。HACHI KUMA combines the natural purity of honey with the
-                warmth and playfulness of a little bear.
+
+        <div class="text-center slider-container">
+            <div class="scroll-track">
+                <span class="info">
+                    HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，
+                    以職人的細心手藝，帶來單純而真摯的甜美時光。HACHI KUMA は、蜂蜜の自然な純粋さと、小熊の愛らしさを重ね合わせ、
+                    厳選した天然素材と職人の丁寧な手仕事で、素朴で真心のこもった甘いひとときをお届けします。HACHI KUMA combines the natural purity of honey with the
+                    warmth and playfulness of a little bear.
+                </span>
+                <span class="info">
+                    HACHI KUMA 結合蜂蜜的自然純淨與小熊的童趣溫暖，堅持選用天然素材，
+                    以職人的細心手藝，帶來單純而真摯的甜美時光。HACHI KUMA は、蜂蜜の自然な純粋さと、小熊の愛らしさを重ね合わせ、
+                    厳選した天然素材と職人の丁寧な手仕事で、素朴で真心のこもった甘いひとときをお届けします。HACHI KUMA combines the natural purity of honey with the
+                    warmth and playfulness of a little bear. </span>
             </div>
         </div>
+
         <br><br><br>
         <br><br><br>
 

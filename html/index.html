@@ -152,6 +152,7 @@
             margin-left: auto;
             margin-right: auto;
 
+
         }
 
         .balllogo {
@@ -160,6 +161,7 @@
             background-color: var(--hk-lighttext);
             border-radius: 50%;
             position: fixed;
+
 
         }
 
@@ -193,7 +195,7 @@
         div.bearfloat {
             /* left: 50%; */
             transform: translateX(-50%);
-            position: absolute;
+            position: fixed;
             /* margin-left: auto; */
             z-index: 9999;
 
@@ -217,11 +219,24 @@
             /* 距離底部 30 像素 */
             right: 10px;
             /* 距離右側 30 像素 */
+            z-index: 9999;
 
         }
 
         .toast {
             max-width: 200px;
+
+        }
+
+        .toast-header {
+            /* 使用你網站自定義的顏色變數 */
+            background-color: var(--hk-text);
+            color: var(--hk-lighttext);
+        }
+
+        .toast-body {
+            background-color: var(--hk-lightbg);
+            color: var(--hk-text);
         }
     </style>
 </head>
@@ -404,8 +419,8 @@
 
 
 
-<!-- <script src="../js/test.js"></script> -->
-<script src="../js/ball.js"></script>
+    <!-- <script src="../js/test.js"></script> -->
+    <script src="../js/ball.js"></script>
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
