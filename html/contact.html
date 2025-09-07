@@ -186,6 +186,20 @@
             background-color: var(--hk-lightbg);
             color: var(--hk-text);
         }
+
+                #myCursor {
+            position: fixed;
+            width: 50px;
+            /* 游標圖片大小 */
+            height: 50px;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            pointer-events: none;
+            /* 讓圖片不阻擋滑鼠點擊 */
+            transition: transform 0.1s ease-out;
+            /* 增加過渡效果，實現黏性 */
+        }
     </style>
 </head>
 
@@ -239,12 +253,12 @@
     <div class="toast-container position-fixed  p-3">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
-                <strong class="me-auto">Hachi Kuma</strong>
+                <strong class="me-auto">HACHIKUMA</strong>
 
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                歡迎光臨HACHIKUMA!
+                歡迎聯絡我們~~
             </div>
         </div>
     </div>
@@ -263,10 +277,11 @@
         </div>
     </div>
 
-
+  <img id="myCursor" src="" alt="Custom cursor image">
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
+      <script src="../js/cursor.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 

@@ -1,41 +1,39 @@
-// 获取小球元素
+
 const bear = document.getElementById('bearfloat-img');
 
-// 定义小球的移动范围 (以距离视窗底部的像素为单位)
-// 这些值现在是「距离底部」的距离
-const bottomMin = 30;  // 距离视窗底部最近 50px
-const bottomMax = 55; // 距离视窗底部最远 100px
 
-// 定义小球的初始位置和速度
-// 初始位置设定在范围内的某个点
-// 这里的 position 是「距离视窗顶部的距离」，需要从底部距离转换
+const bottomMin = 30;  // 最近 50px
+const bottomMax = 55; // 最遠100px
+
+// 小球初始位置和速度
 let position = bottomMin;
-let direction = 0.05; // 1 表示向下移动，-1 表示向上移动
+let direction = 0.05; // 1 表示向下，-1 表示向上
 
 
 
-// 小球动画函数
+
 function animateBear() {
-    // 更新小球的位置
+  
     position +=  direction;
 
     
     if (position > bottomMax) {
-        // 向下移动
+        
         direction = -0.05;
     }
     
     else if (position < bottomMin) {
-        // 向上移動
+        
         direction = 0.05;
     }
    
 
-    // 应用新的位置
+    // 新位置
     bear.style.bottom = position + 'px';
+    requestAnimationFrame(animateBear);
 
     
 }
 
 
-setInterval(animateBear,10)
+requestAnimationFrame(animateBear)

@@ -106,7 +106,8 @@
 
         .card-text {
             font-weight: bolder;
-            color: var(--hk-text);
+            color: var(--hk-darktext);
+            top: 50%;
             /* background-color:var(--hk-lightbg); */
         }
 
@@ -120,7 +121,8 @@
         }
 
         .card-body {
-            height: 175px;
+            height: 75px;
+            
         }
 
         .whole_card {
@@ -149,8 +151,8 @@
             transition: opacity 0.5s ease-in-out;
 
 
-            margin-left: auto;
-            margin-right: auto;
+            /* margin-left: 20px;
+            margin-right: 20px;  */
 
 
         }
@@ -237,6 +239,25 @@
         .toast-body {
             background-color: var(--hk-lightbg);
             color: var(--hk-text);
+
+        }
+
+        #myCursor {
+            position: fixed;
+            width: 50px;
+            /* 游標圖片大小 */
+            height: 50px;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            pointer-events: none;
+            /* 讓圖片不阻擋滑鼠點擊 */
+            transition: transform 0.1s ease-out;
+            /* 增加過渡效果，實現黏性 */
+        }
+
+        h5.title, h6.title {
+            color: var(--hk-darktext);
         }
     </style>
 </head>
@@ -325,11 +346,11 @@
                 <div class="card-group">
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜巴斯克乳酪蛋糕</h5>
-                        <h6 class="text-center fw-bold">Honey Basque Cheesecake</h6>
+                        <h6 class="text-center fw-bold title">Honey Basque Cheesecake</h6>
                         <div class="card">
                             <img src="../img/Cheesecake_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <p class="card-text text-center">濃郁乳酪融合蜂蜜，焦香與甜美並存。</p>
+                                <p class="card-text text-center">濃郁乳酪與蜂蜜，焦香與甜美並存。</p>
                                 <!-- <p class="card-text">Rich cheesecake with honey’s golden sweetness and caramelized -->
                                 <!-- notes.</p> -->
                             </div>
@@ -337,7 +358,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜可麗露</h5>
-                        <h6 class="text-center fw-bold">Honey Canelé</h6>
+                        <h6 class="text-center fw-bold title">Honey Canelé</h6>
                         <div class="card">
                             <img src="../img/Canelé_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -350,7 +371,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜提拉米蘇</h5>
-                        <h6 class="text-center fw-bold">Honey Tiramisu</h6>
+                        <h6 class="text-center fw-bold title">Honey Tiramisu</h6>
                         <div class="card">
                             <img src="../img/Tiramisu_2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -361,7 +382,7 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜瑪德蓮</h5>
-                        <h6 class="text-center fw-bold">Honey Madeleines</h6>
+                        <h6 class="text-center fw-bold title">Honey Madeleines</h6>
                         <div class="card">
                             <img src="../img/Madeleines_1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -417,6 +438,8 @@
         </div>
     </div>
 
+   <img id="myCursor" src="" alt="Custom cursor image">
+
 
 
     <!-- <script src="../js/test.js"></script> -->
@@ -424,6 +447,7 @@
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/cursor.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 
