@@ -13,7 +13,7 @@
     <style>
         .navbar {
             background-color: var(--hk-secondbg);
-            
+
         }
 
         .body {
@@ -63,10 +63,15 @@
             /* 用次要顏色，跟英文區分 */
         }
 
-        .nav-item {
-            /* color: var(--hk-lighttext); */
-            color: white;
+        .navbar-nav .nav-link {
+            color: var(--hk-lighttext) !important;
+            /* 暫時改為黑色 */
             font-weight: bolder;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--hk-text) !important;
+            /* 暫時改為紅色 */
         }
 
         .carousel-item img {

@@ -8,7 +8,7 @@
     <title>Hachikuma</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/wavestyle.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <style>
         .navbar {
@@ -62,10 +62,15 @@
             /* 用次要顏色，跟英文區分 */
         }
 
-        .nav-item {
-            /* color: var(--hk-lighttext); */
-            color: white;
+        .navbar-nav .nav-link {
+            color: var(--hk-lighttext) !important;
+            /* 暫時改為黑色 */
             font-weight: bolder;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--hk-text) !important;
+            /* 暫時改為紅色 */
         }
 
         .option>.nav-link:hover {
@@ -206,19 +211,22 @@
             background: var(--hk-darktext);
             color: var(--hk-lighttext);
         }
+
         .dark {
-            
+
             color: var(--hk-lighttext);
             font-weight: bolder;
 
         }
+
         .dark:hover {
-            
+
             color: var(--hk-text);
             font-weight: bolder;
 
         }
-             .footer {
+
+        .footer {
             background-color: var(--hk-maincolor);
             height: 200px;
             color: var(--hk-darktext);
@@ -259,7 +267,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./about.html">About</a>
                         </li>
-                                                <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="./faq.html">FAQ</a>
                         </li>
                         <li class="nav-item">
@@ -296,7 +304,7 @@
                     <br><br>
                     <div class="container">
                         <div class="cake row" id="Tiramisu">
-                            <h3 class="text-center fw-bold cakesmtitle" >蜂蜜提拉米蘇 Honey Tiramisu
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜提拉米蘇 Honey Tiramisu
                             </h3>
                             <div class="bacc col-md-8 ">
 
@@ -318,7 +326,7 @@
                         <hr>
                         <br>
                         <div class="cake row" id="cheesecake">
-                            <h3 class="text-center fw-bold cakesmtitle" >蜂蜜巴斯克乳酪蛋糕 Honey Basque Cheesecake
+                            <h3 class="text-center fw-bold cakesmtitle">蜂蜜巴斯克乳酪蛋糕 Honey Basque Cheesecake
                             </h3>
                             <div class="bacc col-md-8 ">
 
@@ -368,7 +376,7 @@
 
                     <br><br>
                     <div class="container">
-                        <div class="cake row"  id="Madeleines">
+                        <div class="cake row" id="Madeleines">
                             <h3 class="text-center fw-bold cakesmtitle">蜂蜜瑪德蓮 Honey Madeleines
                             </h3>
                             <div class="bacc col-md-8 ">
@@ -599,18 +607,18 @@
             <div class="wave" id="wave4"></div>
         </div>
     </div>
-          <div class="footer">
-            <div class="text-center p-3 copyright">
-                <span><a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank" class=" dark"><i class="bi bi-instagram mx-2 mb-3"></i></a></span>
-                <span><a href="https://www.facebook.com/"
-                target="_blank" class=" dark"><i class="bi bi bi-facebook mx-2 mb-3"></i></a></span>
-                <span><a href="http://line.me/tw/"
-                target="_blank" class=" dark"><i class="bi bi-line mx-2 mb-3"></i></a></span>
-                <div>© 2025 HACHI KUMA はちくま</div>
-                <div>Sweet moments, made with care.</div>
-            </div>
+    <div class="footer">
+        <div class="text-center p-3 copyright">
+            <span><a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" class=" dark"><i class="bi bi-instagram mx-2 mb-3"></i></a></span>
+            <span><a href="https://www.facebook.com/" target="_blank" class=" dark"><i
+                        class="bi bi bi-facebook mx-2 mb-3"></i></a></span>
+            <span><a href="http://line.me/tw/" target="_blank" class=" dark"><i
+                        class="bi bi-line mx-2 mb-3"></i></a></span>
+            <div>© 2025 HACHI KUMA はちくま</div>
+            <div>Sweet moments, made with care.</div>
         </div>
+    </div>
     <img id="myCursor" src="" alt="Custom cursor image">
 
     <script src="../js/bootstrap.bundle.js"></script>

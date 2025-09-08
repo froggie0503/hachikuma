@@ -60,11 +60,7 @@
             /* 用次要顏色，跟英文區分 */
         }
 
-        .nav-item {
-            /* color: var(--hk-lighttext); */
-            color: white;
-            font-weight: bolder;
-        }
+
 
         .carousel-item img {
             width: 100%;
@@ -268,19 +264,27 @@
             color: var(--hk-lighttext);
         }
 
-     
 
-        div.card:hover{
+
+        div.card:hover {
             border: 5px solid var(--hk-text);
             border-radius: 10px;
         }
+.navbar-nav .nav-link {
+    color: var(--hk-lighttext) !important; /* 暫時改為黑色 */
+    font-weight: bolder;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--hk-text) !important; /* 暫時改為紅色 */
+}
     </style>
 </head>
 
 
 <body class="body">
     <header>
-        <nav class="navbar navbar-expand-lg  navbar-dark ">
+        <nav class="navbar navbar-expand-lg  navbar-light ">
             <div class="container-fluid d-flex">
 
 
@@ -304,7 +308,7 @@
                             <a class="nav-link active" aria-current="page" href="#"></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./Menu.html">Menu</a>
+                            <a class="nav-link"  href="./Menu.html">Menu</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./about.html">About</a>
@@ -392,17 +396,17 @@
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <div>
 
-                        
-                        <h5 class="text-center fw-bold title mt-4">蜂蜜提拉米蘇</h5>
-                        <h6 class="text-center fw-bold title">Honey Tiramisu</h6>
-                        <div class="card">
-                            <a href="../html/Menu.html#Tiramisu"><img src="../img/Tiramisu_2.jpg" class="card-img-top"
-                                    alt="..."></a>
-                            <div class="card-body">
-                                <p class="card-text text-center">經典義式甜點，融入蜂蜜的新風味。</p>
-                                <!-- <p class="card-text">An Italian classic reimagined with honey’s golden sweetness.</p> -->
+
+                            <h5 class="text-center fw-bold title mt-4">蜂蜜提拉米蘇</h5>
+                            <h6 class="text-center fw-bold title">Honey Tiramisu</h6>
+                            <div class="card">
+                                <a href="../html/Menu.html#Tiramisu"><img src="../img/Tiramisu_2.jpg"
+                                        class="card-img-top" alt="..."></a>
+                                <div class="card-body">
+                                    <p class="card-text text-center">經典義式甜點，融入蜂蜜的新風味。</p>
+                                    <!-- <p class="card-text">An Italian classic reimagined with honey’s golden sweetness.</p> -->
+                                </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
