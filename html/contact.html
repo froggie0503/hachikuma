@@ -226,7 +226,7 @@
             cursor: pointer;
             padding: 15px 20px;
             font-weight: bold;
-           border-radius: 5px;
+            border-radius: 5px;
             border: 2px solid var(--hk-text);
             margin-bottom: 10px;
             display: flex;
@@ -265,6 +265,13 @@
             /* border-bottom: 1px solid #ddd; */
             margin-bottom: 10px;
             border-radius: 5px;
+        }
+
+        #map {
+            height: 500px;
+            /* 根據您的需求調整 */
+            width: 100%;
+            /* 根據您的需求調整 */
         }
     </style>
 </head>
@@ -308,14 +315,16 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
-              
+
                 </div>
             </div>
         </nav>
     </header>
     <main>
+        <div class="w-75 mx-auto">
+            <div id="map"></div>
+        </div>
 
-       
 
     </main>
 
@@ -327,7 +336,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
             <div class="toast-body">
-                如有其他問題 歡迎撥打客服電話~~
+                快來買甜點!!!
             </div>
         </div>
     </div>
@@ -351,7 +360,9 @@
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
     <script src="../js/cursor.js"></script>
-    <!-- <script src="../js/wave.js"></script> -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGgWr8l9IZ_7XWVlwj7MGSuKCVU6-1mMg&callback=initMap"></script>
+    <script src="../js/map.js"></script>
 </body>
 
 </html>
