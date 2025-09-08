@@ -130,6 +130,6 @@ function initMap() {
         position: myLatLng, // 將地標放在地圖中心點
         map, // 指定地標要顯示在哪張地圖上 (ES6 簡寫)
         title: "HACHIKUMA", // 滑鼠移到地標上會顯示的文字
-        icon:"https://raw.githubusercontent.com/froggie0503/hachikuma/refs/heads/main/img/bear_head.png"
+        icon:"https://raw.githubusercontent.com/froggie0503/hachikuma/refs/heads/main/img/logo_small.png"
     });
 }
