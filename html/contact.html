@@ -24,6 +24,18 @@
             font-weight: bolder;
 
         }
+        .dark {
+            
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+
+        }
+        .dark:hover {
+            
+            color: var(--hk-text);
+            font-weight: bolder;
+
+        }
 
         #logo {
             width: 60px;
@@ -92,12 +104,7 @@
             margin: -8px 0px 0px 0px;
         }
 
-        .footer {
-            height: 200px;
-            background-color: black;
-            position: relative;
 
-        }
 
         .month {
             background-color: var(--hk-secondbg);
@@ -171,6 +178,7 @@
             /* 距離底部 30 像素 */
             right: 10px;
             /* 距離右側 30 像素 */
+            z-index: 9999;
 
         }
 
@@ -221,53 +229,7 @@
 
         }
 
-        /* 為 FAQ 問題添加基礎樣式 */
-        .faq-question {
-            position: relative;
-            cursor: pointer;
-            padding: 15px 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            border: 2px solid var(--hk-text);
-            margin-bottom: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* 圖標的共用樣式 */
-        .faq-icon::before {
-            content: '＋';
-            /* 預設為向下角括號 */
-            display: inline-block;
-            font-size: 1.5rem;
-            color: var(--hk-text);
-            transition: transform 0.3s ease;
-            /* 添加過渡效果，讓旋轉更平滑 */
-        }
-
-        /* 當問題被點擊展開時，將圖標旋轉成叉叉 */
-        .faq-question:not(.collapsed) .faq-icon::before {
-            font-size: 1.5rem;
-            content: '＋';
-            /* 展開時變成叉叉 */
-            transform: rotate(45deg);
-            color: var(--hk-text);
-        }
-
-        /* 答案區塊的樣式 */
-        .faq-answer {
-            padding: 10px 20px;
-            background-color: var(--hk-secondbg);
-            font-weight: 600;
-            color: var(--hk-darktext);
-            /* border-left: 1px solid  var(--hk-text);
-            border-right: 1px solid var(--hk-text); */
-            /* border-bottom: 1px solid #ddd; */
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-
+        
         #map {
             height: 500px;
             /* 根據您的需求調整 */
@@ -293,6 +255,9 @@
 
         .footer {
             background-color: var(--hk-maincolor);
+            height: 200px;
+            color: var(--hk-darktext);
+            font-weight: 700;
         }
     </style>
 </head>
@@ -355,8 +320,9 @@
         <div class="w-75 mx-auto">
             <div id="map"></div>
         </div>
+
         <hr>
-        <h1 class="text-center titleT">聯繫我們</h1>
+        <h1 class="text-center titleT" id="contact">聯繫我們</h1>
         <h1 class="text-center titleT">Contact us</h1>
         <div class="form text-center">
             <iframe
@@ -394,15 +360,20 @@
             </div>
         </div>
         <div class="footer">
-            <div class="row">
-                <div class="col-3">
-                    <a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn_dark"><i class="bi bi-instagram">instagram</i></a>
-                </div>
-                <div class="col-3">
-                    <a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn_dark"><i class="bi bi-instagram">instagram</i></a>
-                </div>
+            <div class="text-center p-3 copyright">
+                <span><a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" class=" dark"><i class="bi bi-instagram mx-2 mb-3"></i></a></span>
+                <span><a href="https://www.facebook.com/"
+                target="_blank" class=" dark"><i class="bi bi bi-facebook mx-2 mb-3"></i></a></span>
+                <span><a href="http://line.me/tw/"
+                target="_blank" class=" dark"><i class="bi bi-line mx-2 mb-3"></i></a></span>
+                <div>© 2025 HACHI KUMA はちくま</div>
+                <div>Sweet moments, made with care.</div>
             </div>
         </div>
+
+
+
     </footer>
 
     <img id="myCursor" src="" alt="Custom cursor image">

@@ -8,9 +8,12 @@
     <title>Hachikuma</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/wavestyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
         .navbar {
             background-color: var(--hk-secondbg);
+            color: beige;
         }
 
         .body {
@@ -170,6 +173,7 @@
             /* 距離底部 30 像素 */
             right: 10px;
             /* 距離右側 30 像素 */
+            z-index: 999;
 
         }
 
@@ -276,6 +280,38 @@
             /* -webkit-text-stroke: 1px var(--hk-darktext); */
 
         }
+
+        .dark {
+
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+
+        }
+
+        .dark:hover {
+
+            color: var(--hk-text);
+            font-weight: bolder;
+
+        }
+
+        .footer {
+            background-color: var(--hk-maincolor);
+            height: 200px;
+            color: var(--hk-darktext);
+            font-weight: 700;
+        }
+
+        .note {
+            background-color: var(--hk-text);
+            color: var(--hk-lighttext);
+            border-radius: 20px;
+            font-size: larger;
+        }
+
+        .note:hover {
+            background-color: var(--hk-darktext);
+        }
     </style>
 </head>
 
@@ -327,6 +363,11 @@
         <br>
 
         <h1 class="text-center titleT">常見問題 FAQ</h1>
+        <a href="../html/contact.html#contact" class="btn d-block w-50 mx-auto">
+            <div class="text-center note p-3">
+                如有更多問題都可至contact聯繫我們~
+            </div>
+        </a>
         <br>
         <h1 class="text-center titleT titlefaq">訂購與配送</h1>
 
@@ -374,6 +415,21 @@
                 </div>
             </div>
             <div class="faq-item">
+                <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse7"
+                    aria-expanded="false" aria-controls="collapse7">
+                    <span>甜點是否有含過敏原？</span>
+                    <span class="faq-icon"></span>
+                </div>
+                <div id="collapse7" class="faq-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer">
+                        堅果、奶、蛋、麵粉，如有不確定的部分可以在contact聯絡我們!
+                        <a href="../html/contact.html#contact">
+                            <i class="bi bi-link-45deg "></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
                 <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse4"
                     aria-expanded="false" aria-controls="collapse4">
                     <span>產品中的蜂蜜是使用哪種蜂蜜？</span>
@@ -386,13 +442,7 @@
                         <br>
                         與台灣在地農場合作，產品所使用的天然蜂蜜，也有做販售呦!
                         <a href="../html/Menu.html#farm">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-link-45deg" viewBox="0 0 16 16">
-                                <path
-                                    d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
-                                <path
-                                    d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
-                            </svg>
+                            <i class="bi bi-link-45deg "></i>
                         </a>
 
                     </div>
@@ -423,7 +473,7 @@
                         以下為處理方式，我們將會盡速為您提供服務。
                         <br>
                         <br>
-                       拍照存證 > 立即聯繫客服 > 換貨或退款處理
+                        拍照存證 > 立即聯繫客服 > 換貨或退款處理
 
                     </div>
                 </div>
@@ -460,6 +510,19 @@
             <div class="wave" id="wave4"></div>
         </div>
     </div>
+    <div class="footer">
+        <div class="text-center p-3 copyright">
+            <span><a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" class=" dark"><i class="bi bi-instagram mx-2 mb-3"></i></a></span>
+            <span><a href="https://www.facebook.com/" target="_blank" class=" dark"><i
+                        class="bi bi bi-facebook mx-2 mb-3"></i></a></span>
+            <span><a href="http://line.me/tw/" target="_blank" class=" dark"><i
+                        class="bi bi-line mx-2 mb-3"></i></a></span>
+            <div>© 2025 HACHI KUMA はちくま</div>
+            <div>Sweet moments, made with care.</div>
+        </div>
+    </div>
+
 
     <img id="myCursor" src="" alt="Custom cursor image">
     <script src="../js/bootstrap.bundle.js"></script>

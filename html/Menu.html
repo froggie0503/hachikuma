@@ -8,6 +8,8 @@
     <title>Hachikuma</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/wavestyle.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
         .navbar {
             background-color: var(--hk-secondbg);
@@ -167,6 +169,7 @@
             /* 距離底部 30 像素 */
             right: 10px;
             /* 距離右側 30 像素 */
+            z-index: 999;
 
         }
 
@@ -202,6 +205,24 @@
         ::selection {
             background: var(--hk-darktext);
             color: var(--hk-lighttext);
+        }
+        .dark {
+            
+            color: var(--hk-lighttext);
+            font-weight: bolder;
+
+        }
+        .dark:hover {
+            
+            color: var(--hk-text);
+            font-weight: bolder;
+
+        }
+             .footer {
+            background-color: var(--hk-maincolor);
+            height: 200px;
+            color: var(--hk-darktext);
+            font-weight: 700;
         }
     </style>
 </head>
@@ -578,6 +599,18 @@
             <div class="wave" id="wave4"></div>
         </div>
     </div>
+          <div class="footer">
+            <div class="text-center p-3 copyright">
+                <span><a href="https://www.instagram.com/instagram?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" class=" dark"><i class="bi bi-instagram mx-2 mb-3"></i></a></span>
+                <span><a href="https://www.facebook.com/"
+                target="_blank" class=" dark"><i class="bi bi bi-facebook mx-2 mb-3"></i></a></span>
+                <span><a href="http://line.me/tw/"
+                target="_blank" class=" dark"><i class="bi bi-line mx-2 mb-3"></i></a></span>
+                <div>© 2025 HACHI KUMA はちくま</div>
+                <div>Sweet moments, made with care.</div>
+            </div>
+        </div>
     <img id="myCursor" src="" alt="Custom cursor image">
 
     <script src="../js/bootstrap.bundle.js"></script>
