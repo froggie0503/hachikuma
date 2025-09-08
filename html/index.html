@@ -122,7 +122,7 @@
 
         .card-body {
             height: 75px;
-            
+
         }
 
         .whole_card {
@@ -256,8 +256,14 @@
             /* 增加過渡效果，實現黏性 */
         }
 
-        h5.title, h6.title {
+        h5.title,
+        h6.title {
             color: var(--hk-darktext);
+        }
+
+        ::selection {
+            background: var(--hk-darktext);
+            color: var(--hk-lighttext);
         }
     </style>
 </head>
@@ -295,12 +301,13 @@
                             <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
-                    <form class="d-flex ms-3 ">
-                        <button class="btn  me-2 btn_dark" type="button">立即訂購</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -348,7 +355,8 @@
                         <h5 class="text-center fw-bold title mt-4">蜂蜜巴斯克乳酪蛋糕</h5>
                         <h6 class="text-center fw-bold title">Honey Basque Cheesecake</h6>
                         <div class="card">
-                            <img src="../img/Cheesecake_2.jpg" class="card-img-top" alt="...">
+                            <a href="../html/Menu.html#cheesecake"><img src="../img/Cheesecake_2.jpg"
+                                    class="card-img-top" alt="..."></a>
                             <div class="card-body">
                                 <p class="card-text text-center">濃郁乳酪與蜂蜜，焦香與甜美並存。</p>
                                 <!-- <p class="card-text">Rich cheesecake with honey’s golden sweetness and caramelized -->
@@ -356,11 +364,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
+
+                    <div class="col-sm-12 col-md-6 col-lg-3 whole-card ">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜可麗露</h5>
                         <h6 class="text-center fw-bold title">Honey Canelé</h6>
                         <div class="card">
-                            <img src="../img/Canelé_2.jpg" class="card-img-top" alt="...">
+                            <a href="../html/Menu.html#Canele"><img src="../img/Canelé_2.jpg" class="card-img-top"
+                                    alt="..."></a>
                             <div class="card-body">
                                 <p class="card-text text-center">外脆內嫩，蜂蜜芬芳悠長。</p>
                                 <br>
@@ -369,11 +379,13 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-sm-12 col-md-6 col-lg-3 whole-card">
                         <h5 class="text-center fw-bold title mt-4">蜂蜜提拉米蘇</h5>
                         <h6 class="text-center fw-bold title">Honey Tiramisu</h6>
                         <div class="card">
-                            <img src="../img/Tiramisu_2.jpg" class="card-img-top" alt="...">
+                            <a href="../html/Menu.html#Tiramisu"><img src="../img/Tiramisu_2.jpg" class="card-img-top"
+                                    alt="..."></a>
                             <div class="card-body">
                                 <p class="card-text text-center">經典義式甜點，融入蜂蜜的新風味。</p>
                                 <!-- <p class="card-text">An Italian classic reimagined with honey’s golden sweetness.</p> -->
@@ -384,7 +396,8 @@
                         <h5 class="text-center fw-bold title mt-4">蜂蜜瑪德蓮</h5>
                         <h6 class="text-center fw-bold title">Honey Madeleines</h6>
                         <div class="card">
-                            <img src="../img/Madeleines_1.jpg" class="card-img-top" alt="...">
+                            <a href="../html/Menu.html#snacks"><img src="../img/Madeleines_1.jpg" class="card-img-top"
+                                    alt="..."></a>
                             <div class="card-body">
                                 <p class="card-text text-center">蜂蜜點綴的貝殼小蛋糕，清香迷人。</p>
                                 <!-- <p class="card-text">Delicate shell-shaped cakes with a touch of honey aroma.</p> -->
@@ -438,7 +451,7 @@
         </div>
     </div>
 
-   <img id="myCursor" src="" alt="Custom cursor image">
+    <img id="myCursor" src="" alt="Custom cursor image">
 
 
 

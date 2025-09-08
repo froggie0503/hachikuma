@@ -113,7 +113,7 @@
             color: var(--hk-text);
             margin-bottom: 30px;
             /* background-color: var(--hk-lighttext); */
-            border-bottom: 4mm ridge var(--hk-text);
+            border-bottom: 8px ridge var(--hk-text);
         }
 
 
@@ -198,6 +198,11 @@
             transition: transform 0.1s ease-out;
             /* 增加過渡效果，實現黏性 */
         }
+
+        ::selection {
+            background: var(--hk-darktext);
+            color: var(--hk-lighttext);
+        }
     </style>
 </head>
 
@@ -234,12 +239,13 @@
                             <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
-                    <form class="d-flex ms-3 ">
-                        <button class="btn  me-2 btn_dark" type="button">立即訂購</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -268,7 +274,7 @@
 
                     <br><br>
                     <div class="container">
-                        <div class="cake row">
+                        <div class="cake row" id="Tiramisu">
                             <h3 class="text-center fw-bold cakesmtitle">蜂蜜提拉米蘇 Honey Tiramisu
                             </h3>
                             <div class="bacc col-md-8 ">
@@ -290,7 +296,7 @@
                         <br>
                         <hr>
                         <br>
-                        <div class="cake row">
+                        <div class="cake row" id="cheesecake">
                             <h3 class="text-center fw-bold cakesmtitle">蜂蜜巴斯克乳酪蛋糕 Honey Basque Cheesecake
                             </h3>
                             <div class="bacc col-md-8 ">
@@ -341,7 +347,7 @@
 
                     <br><br>
                     <div class="container">
-                        <div class="cake row">
+                        <div class="cake row" id="Madeleines">
                             <h3 class="text-center fw-bold cakesmtitle">蜂蜜瑪德蓮 Honey Madeleines
                             </h3>
                             <div class="bacc col-md-8 ">
@@ -407,7 +413,7 @@
                         <br>
                         <hr>
                         <br>
-                        <div class="cake row">
+                        <div class="cake row" id="Canele">
                             <h3 class="text-center fw-bold cakesmtitle">蜂蜜可麗露 Honey Canelé
                             </h3>
                             <div class="bacc col-md-8 ">
@@ -578,7 +584,7 @@
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
     <script src="../js/cursor.js"></script>
-    <!-- <script src="../js/wave.js"></script> -->
+    <script src="../js/anchor.js"></script>
 </body>
 
 </html>

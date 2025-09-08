@@ -226,8 +226,9 @@
             cursor: pointer;
             padding: 15px 20px;
             font-weight: bold;
-           border-radius: 5px;
+            border-radius: 5px;
             border: 2px solid var(--hk-text);
+            color: var(--hk-darktext);
             margin-bottom: 10px;
             display: flex;
             justify-content: space-between;
@@ -265,6 +266,15 @@
             /* border-bottom: 1px solid #ddd; */
             margin-bottom: 10px;
             border-radius: 5px;
+        }
+
+        .titlefaq {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--hk-text);
+            /* 文字中間透明 */
+            /* -webkit-text-stroke: 1px var(--hk-darktext); */
+
         }
     </style>
 </head>
@@ -308,14 +318,87 @@
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
-              
+
                 </div>
             </div>
         </nav>
     </header>
     <main>
 
-       
+        <h1 class="text-center titleT">常見問題 FAQ</h1>
+        <h1 class="text-center titleT titlefaq">訂購與配送</h1>
+
+        <div class="w-75 mx-auto">
+            <div class="faq-item">
+                <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="false" aria-controls="collapse1">
+                    <span>請問如何下單？</span>
+                    <span class="faq-icon"></span>
+                </div>
+                <div id="collapse1" class="faq-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer">
+                        點選產品 > 加入購物車 > 結帳 > 輸入收件資訊 > 完成付款。
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="false" aria-controls="collapse2">
+                    <span>訂購後多久可以收到商品？</span>
+                    <span class="faq-icon"></span>
+                </div>
+                <div id="collapse2" class="faq-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer">
+                        確認訂單後約3-5個工作天內出貨。
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1 class="text-center titleT titlefaq">產品與保存</h1>
+            <div class="faq-item">
+                <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                    aria-expanded="false" aria-controls="collapse3">
+                    <span>甜點可以保存多久？該如何保存？</span>
+                    <span class="faq-icon"></span>
+                </div>
+                <div id="collapse3" class="faq-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer">
+                        包裝上皆有貼上建議保存方式的貼紙。
+                        <br>
+                        冷藏、冷凍商品請在收貨後盡快依照溫層擺放置冰箱，待要食用時再依照包裝建議方法操作；常溫商品請置於陰涼場所並盡快食用以享用到產品最好的狀態。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                    aria-expanded="false" aria-controls="collapse4">
+                    <span>產品中的蜂蜜是使用哪種蜂蜜？</span>
+                    <span class="faq-icon"></span>
+                </div>
+                <div id="collapse4" class="faq-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="faq-answer">
+                        因天然蜂蜜因應季節會有稍微不同的風味，每種產品皆會使用複數蜂蜜因應季節來調整風味。
+                        <br>
+                        與台灣在地農場合作，產品所使用的天然蜂蜜，也有做販售呦!
+                        <a href="../html/Menu.html#farm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                <path
+                                    d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                                <path
+                                    d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h1 class="text-center titleT titlefaq">付款與售後服務</h1>
+        </div>
+
+
 
     </main>
 

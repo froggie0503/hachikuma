@@ -317,7 +317,7 @@
             color: var(--hk-text);
         }
 
-                #myCursor {
+        #myCursor {
             position: fixed;
             width: 50px;
             /* 游標圖片大小 */
@@ -329,6 +329,11 @@
             /* 讓圖片不阻擋滑鼠點擊 */
             transition: transform 0.1s ease-out;
             /* 增加過渡效果，實現黏性 */
+        }
+
+        ::selection {
+            background: var(--hk-darktext);
+            color: var(--hk-lighttext);
         }
     </style>
 </head>
@@ -366,12 +371,13 @@
                             <a class="nav-link" href="./about.html">About</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="./faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="./contact.html">Contact</a>
                         </li>
                     </ul>
-                    <form class="d-flex ms-3 ">
-                        <button class="btn  me-2 btn_dark" type="button">立即訂購</button>
-                    </form>
+
                 </div>
             </div>
         </nav>
@@ -538,8 +544,8 @@
                         <div>
                             <div class="p-3">
                                 <div class="info text-center align-self-center">
-                                    <div class="p-1 minititle ms-auto">蜂蜜</div>
-                                    <div class="p-1">台灣龍眼蜜 / 百花蜜：天然甜味，帶花香，讓甜點更溫潤。</div>
+                                    <div class="p-1 minititle ms-auto">台灣小農蜂蜜</div>
+                                    <div class="p-1">使用台灣龍眼蜜以及百花蜜，天然甜味，帶花香，讓甜點更溫潤。</div>
                                 </div>
                             </div>
                         </div>
@@ -549,15 +555,15 @@
                 <hr>
                 <div class=" row justify-content-center">
                     <div class="ingredientsimg col-lg-8 col-12 ">
-                        <img src="../img/Donuts_1.jpg">
+                        <img src="../img/milk.jpg">
                     </div>
 
                     <div class="col-lg-4  align-self-center col-12">
                         <div>
                             <div class="p-3">
                                 <div class="info text-center align-self-center">
-                                    <div class="p-1 minititle ms-auto">牛奶</div>
-                                    <div class="p-1">台灣小農鮮乳：鮮香純淨，增添甜點奶香。</div>
+                                    <div class="p-1 minititle ms-auto">台灣小農鮮乳</div>
+                                    <div class="p-1">與小農合作產地直送，鮮香純淨，增添甜點奶香。</div>
                                 </div>
                             </div>
                         </div>
@@ -609,12 +615,12 @@
         <img src="../img/bear_float.png" class="bearfloat" id="bearfloat-img">
     </div>
 
-  <img id="myCursor" src="" alt="Custom cursor image">
+    <img id="myCursor" src="" alt="Custom cursor image">
 
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/bearfloat.js"></script>
     <script src="../js/toasts.js"></script>
-      <script src="../js/cursor.js"></script>
+    <script src="../js/cursor.js"></script>
     <!-- <script src="../js/wave.js"></script> -->
 </body>
 
