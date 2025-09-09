@@ -72,6 +72,11 @@
             color: var(--hk-text) !important;
             /* 暫時改為紅色 */
         }
+        .menubutton .nav-link:hover {
+            color: var(--hk-lighttext) ;
+            background-color: var(--hk-maincolor) ;
+            /* 暫時改為紅色 */
+        }
 
         .option>.nav-link:hover {
             color: var(--hk-lighttext);
@@ -191,6 +196,7 @@
         .toast-body {
             background-color: var(--hk-lightbg);
             color: var(--hk-text);
+            font-weight: bold;
         }
 
         #myCursor {
@@ -283,15 +289,15 @@
         <div class="option">
             <br>
             <h1 class="text-center">MENU</h1>
-            <ul class="nav nav-pills flex-column justify-content-center flex-md-row text-center mx-auto">
+            <ul class="nav nav-pills flex-column justify-content-center flex-md-row text-center mx-auto menubutton">
                 <li class="nav-item">
-                    <a class="nav-link active " aria-current="page" href="#cakemenu" data-bs-toggle="pill">精緻蛋糕</a>
+                    <a class="nav-link active fw-bold" aria-current="page" href="#cakemenu" data-bs-toggle="pill">精緻蛋糕</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#snacks" data-bs-toggle="pill">輕食小點</a>
+                    <a class="nav-link fw-bold" href="#snacks" data-bs-toggle="pill">輕食小點</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#farm" data-bs-toggle="pill">小農產品</a>
+                    <a class="nav-link fw-bold" href="#farm" data-bs-toggle="pill">小農產品</a>
                 </li>
 
             </ul>
@@ -489,14 +495,10 @@
                                         <p>農場：夏湖農場</p>
                                         <p>特色：多花混合，依季節風味不同</p>
                                         <p>香味：清雅多變，層次豐富</p>
-                                        <i class="bi bi-map-fill"></i>
+                                        
                                     </div>
                                     <a class="btn btn_dark text-end" href="https://sha-lake.com/" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
-                                        </svg>
+                                        <i class="bi bi-map-fill"></i>
                                         查看農場資訊
                                     </a>
 
@@ -522,14 +524,10 @@
                                         <p>農場：宏基蜂蜜生態農場</p>
                                         <p>特色：台灣代表性蜂蜜，產季 4–5 月</p>
                                         <p>香味：香氣濃厚、甜味圓潤</p>
-                                        <i class="bi bi-map-fill"></i>
+                                        
                                     </div>
                                     <a class="btn btn_dark text-end" href="https://www.hgbees.com.tw" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
-                                        </svg>
+                                    <i class="bi bi-map-fill"></i>
                                         查看農場資訊
                                     </a>
 
@@ -545,7 +543,7 @@
                             <div class="bacc col-md-8 ">
 
 
-                                <img src="../img/honey_2.jpg" class="cakeimg w-100">
+                                <img src="../img/honey_5.jpg" class="cakeimg w-100">
 
                             </div>
                             <div
@@ -555,16 +553,12 @@
                                         <p>農場：雅歌園有機教育農場</p>
                                         <p>特色：採收期 3–4 月，甜度高</p>
                                         <p>香味：荔枝花香甜、果香明顯</p>
-                                        <i class="bi bi-map-fill"></i>
+                                        
                                     </div>
                                     <a class="btn btn_dark text-end"
                                         href="https://ecofarm.myorganic.org.tw/%E8%9C%82%E8%9C%9C?utm_source=chatgpt.com"
                                         target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-map-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M16 .5a.5.5 0 0 0-.598-.49L10.5.99 5.598.01a.5.5 0 0 0-.196 0l-5 1A.5.5 0 0 0 0 1.5v14a.5.5 0 0 0 .598.49l4.902-.98 4.902.98a.5.5 0 0 0 .196 0l5-1A.5.5 0 0 0 16 14.5zM5 14.09V1.11l.5-.1.5.1v12.98l-.402-.08a.5.5 0 0 0-.196 0zm5 .8V1.91l.402.08a.5.5 0 0 0 .196 0L11 1.91v12.98l-.5.1z" />
-                                        </svg>
+                                        <i class="bi bi-map-fill"></i>
                                         查看農場資訊
                                     </a>
 
